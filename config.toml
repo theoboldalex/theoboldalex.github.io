@@ -1,0 +1,16 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Alex Theobold'
+theme = 'hugo-coder'
+
+[params]
+  author = "Alex Theobold"
+  info = "Programmer"
+  description = "My dev blog"
+  keywords = "blog,developer,personal"
+  since = 2022
+
+  colorScheme = "dark"
+  hidecolorschemetoggle = false
+
+  customCSS = ["css/custom.css"]
