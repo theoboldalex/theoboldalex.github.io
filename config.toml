@@ -1,16 +1,34 @@
 baseURL = 'https://theoboldalex.github.io'
 languageCode = 'en-us'
 title = 'Alex Theobold'
-theme = 'hugo-coder'
+theme = 'cactus'
 
 [params]
   author = "Alex Theobold"
   info = "Programmer"
-  description = "My dev blog"
+  description = "Musings on software, development and technology"
   keywords = "blog,developer,personal"
   since = 2022
+  copywrite = "Alex Theobold"
 
-  colorScheme = "dark"
-  hidecolorschemetoggle = false
+  colortheme = "dark"
+  mainSection = "posts"
 
   customCSS = ["css/custom.css"]
+
+# Menu links
+# [[menu.main]]
+#   name = "Blog"
+#   weight = 1
+#   url  = "posts/"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  link = "https://github.com/theoboldalex/"
+[[params.social]]
+  name = "Twitter"
+  link = "https://twitter.com/theoboldalex/"
+[[params.social]]
+  name = "linkedin"
+  link = "https://linkedin.com/in/theoboldalex/"
