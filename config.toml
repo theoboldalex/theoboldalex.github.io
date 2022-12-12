@@ -6,7 +6,7 @@ theme = 'cactus'
 [params]
   author = "Alex Theobold"
   info = "Programmer"
-  description = "Musings on software, development and technology"
+  description = "Musings on software, development and working in tech"
   keywords = "blog,developer,personal"
   since = 2022
   copywrite = "Alex Theobold"
@@ -15,12 +15,6 @@ theme = 'cactus'
   mainSection = "posts"
 
   customCSS = ["css/custom.css"]
-
-# Menu links
-# [[menu.main]]
-#   name = "Blog"
-#   weight = 1
-#   url  = "posts/"
 
 # Social links
 [[params.social]]
