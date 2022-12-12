@@ -103,7 +103,7 @@ Next, we write as simple a server that you are likely to find. This just returns
 ```
 
 The code here is far from perfect and probably goes against many best practices, but that is not the aim here, the aim is to get up and 
-running with something as quickly a spossible so that we can iterate on it and pick up idioms and best practice by building something non-trivial.
+running with something as quickly as possible so that we can iterate on it and pick up idioms and best practice by building something non-trivial.
 
 So from here on out I will just keep the fun factor alive and build out a simple project using Clojure. Maybe I'll find a use case for it in my day
 job. Maybe it will teach me to think diffrently about programming or maybe not. All I know right now is that I'm having fun programming again. 
