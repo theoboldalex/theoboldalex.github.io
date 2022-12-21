@@ -27,6 +27,3 @@ theme = 'cactus'
   name = "linkedin"
   link = "https://linkedin.com/in/theoboldalex/"
 
-# enable comments on posts
-[params.comments]
-  enabled = true
