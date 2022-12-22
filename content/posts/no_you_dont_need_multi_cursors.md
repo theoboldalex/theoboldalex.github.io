@@ -1,5 +1,5 @@
 ---
-title: "No,you don't need multi cursor editing in Vim"
+title: "No,you (probably) don't need multi cursor editing in Vim"
 date: 2022-12-21T19:23:16Z
 draft: false
 ---
@@ -153,18 +153,66 @@ My NeoVim is my best friend. It is my life. I must master it as I must master my
 Without me, my NeoVim is useless. Without my NeoVim, I am useless. 
 ```
 
-### Match groups
-urls for curl
+### Using capture groups to wrap text
+I recently came up against a problem in work whereby I had a text file with around 4000 unique urls inside it and I needed to make a 
+request to each and every one of them. While I could have catted the file and piped each line to curl via xargs, I decided to use NeoVim's 
+substitute command to wrap each line of text in the file before calling `curl -K uri.txt`.
+
+Vim regex made this task almost trivial with its support for capture groups so lets take a look at how I did this.
+
+```
+-- BEFORE
+-- :%s/\(.*\)/url="\1"/g
+https://www.some-api.com/v2/some-endpoint/1
+https://www.some-api.com/v2/some-endpoint/2
+https://www.some-api.com/v2/some-endpoint/3
+https://www.some-api.com/v2/some-endpoint/4
+https://www.some-api.com/v2/some-endpoint/5
+https://www.some-api.com/v2/some-endpoint/6
+
+-- AFTER
+url="https://www.some-api.com/v2/some-endpoint/1"
+url="https://www.some-api.com/v2/some-endpoint/2"
+url="https://www.some-api.com/v2/some-endpoint/3"
+url="https://www.some-api.com/v2/some-endpoint/4"
+url="https://www.some-api.com/v2/some-endpoint/5"
+url="https://www.some-api.com/v2/some-endpoint/6"
+```
+
+Ok, I'll admit that this one looks a little more complex but if we break it down into its consitiuent chunks, it is actually
+pretty straightforward.
+
+By now, we should be pretty comfortable with the basic substitute command format of `:%s///g` so lets just look at the search and replace patterns.
+
+#### Search pattern ```\(.*\)```
+
+The search pattern here uses a capture denoted by parenthesis. Note that in Vim flavoured regex, these parentheses need to be escaped, thus
+the leading backslashes. Each capturing group in a pettern match can then be used in the replacement pattern accessed through an escaped
+number as we will see when we look at the replacement pattern next.
+
+In our capture group, we ask Vim to capture lines that have;
+
+ - `.` - Any single character
+ - ```*``` - Zero or more times
+
+Thus, our capture group in real terms is going to capture any and all lines that have characters on them. Perfect for this use case.
+
+#### Replace pattern ```url="\1"```
+
+Now that we have our pattern selected, we cal look at a replacement. It is simpler to think about this in terms of wrapping the capture 
+group index `\1` than stepping through each character  in the replace pattern. All we really need to know is that in our case, `\1`
+represtents everything that was matched by our capture group. so ```url="\1"``` becomes ```url="https://some-api.com/v2/some-endpoint/1"```.
+
 ### A more complex example
 json to PHP array
 
 ### A new argument
 Another task that crops up regularly and is a great fit for using the substitute command for a solution is replacing extracted variables in function calls.
-Take the below example from my NeoVim config for setting keymaps upon an LSP client attahcing to a buffer. As you can see, many of the `vim.keymap.set` calls take a table 
-as their final input. Initially this was written with table directly coded into the calls but as the list of mapings grew, it made sense to refactor this out into a variable
+Take the below example from my NeoVim config for setting keymaps upon an LSP client attatching to a buffer. As you can see, many of the `vim.keymap.set` calls take a table 
+as their final input. Initially this was written with table directly coded into the calls but as the list of mappings grew, it made sense to refactor this out into a variable
 that could be reused across all calls. Again the first tool I reached for was the sub substitute command.
 
-First, I extracted the table into a local variable called `opts` before I got to work on replacing all of the hardocded tbales with the new opts variable.
+First, I extracted the table into a local variable called `opts` before I got to work on replacing all of the hard-coded tables with the new opts variable.
 **Note: remember to visually select the lines we want the replacement to work on for this one.**
 ```lua
 -- BEFORE
