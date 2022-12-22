@@ -1,5 +1,5 @@
 ---
-title: "No,you (probably) don't need multi cursor editing in Vim"
+title: "No, you (probably) don't need multi cursor editing in Vim"
 date: 2022-12-21T19:23:16Z
 draft: false
 ---
@@ -7,7 +7,7 @@ draft: false
 **Disclaimer: This post assumes at least a passing familiarity with regular expressions.**
 
 A question I see come up relatively often in the various vim communities online is a request for plugin recommendations that provide support for multi cursor editing in Vim
-and Vim-like editors.
+and Vim-like editors. These requests usually come from newcomers to Vim who aren't aware of some of the powers built into Vim's core.
 
 In this post, I'm going to show you why you (probably) don't need multi cursor editing in Vim and how to get the similar behavior to multi cursors through native features that have been
 around in Vim for a long time (maybe even since its inception in some cases).
@@ -76,7 +76,7 @@ why in this example.
 
 ```SQL
 -- BEFORE
--- vi[:s/\d\zs$/,
+-- vi(:s/\d\zs$/,
 SELECT some_data_point
 FROM users
 WHERE id IN (
@@ -199,12 +199,46 @@ Thus, our capture group in real terms is going to capture any and all lines that
 
 #### Replace pattern ```url="\1"```
 
-Now that we have our pattern selected, we cal look at a replacement. It is simpler to think about this in terms of wrapping the capture 
+Now that we have our pattern selected, we can look at a replacement. It is simpler to think about this in terms of wrapping the capture 
 group index `\1` than stepping through each character  in the replace pattern. All we really need to know is that in our case, `\1`
 represtents everything that was matched by our capture group. so ```url="\1"``` becomes ```url="https://some-api.com/v2/some-endpoint/1"```.
 
 ### A more complex example
-json to PHP array
+
+Now for a more complex example. Granted, this example is not something I would type out in full each time I want to use it as it is a
+little complex but it does show the full power of the substitute command and also highlights another great fwature of Vim in that
+you can save and map any of these commands to a shortcut to be used again and again, so realistically, for complex examples like this,
+it is a case of write once, run anywhere (take that Java).
+
+```lua
+vim.keymap.set(
+    "c", 
+    "<leader>php", 
+    "s/{\\|}\\|\":/\\={'{':'[', '}':']', '\":':'\" =>'}[submatch(0)]/g<cr>"
+)
+```
+
+Take the above example from my NeoVim config. The substitute command here is mapped to a shortcut in visual mode and carries out 
+the task of converting JSON to a PHP associative array. Not something I doe every day but which does come in useful from time
+to time. I'm not going to break this one down character by character as this post would get really long but essentially, the substitute
+command can take a table to specify match replacements so in the example, `{` wil be replaced with `[`, `}` will become `]` and `: ` 
+will become ` => ` taking us from 
+
+```JSON
+{
+    "name": "Alex",
+    "age": 35
+}
+```
+
+to
+
+```php
+[
+    "name" => "Alex",
+    "age" => 35
+]
+```
 
 ### A new argument
 Another task that crops up regularly and is a great fit for using the substitute command for a solution is replacing extracted variables in function calls.
@@ -258,8 +292,97 @@ end
 ```
 
 This is great but it could have also been achieved in another way too using Macros. We will get on those now.
+
 ## Macros
-### From arrow functions to regular functions and back again
+
+Macros are a big subject with far too much to cover in an article like this so I would suggest to [do some reading](https://vim.fandom.com/wiki/Macros)
+up on them if this is your first time encountering them. All we really need to know right now though is that they are a means of 
+recording a reusable set of actions to a register that we can apply again and again while the recorded macro exists in the register.
+Recording is just one aspect of Macros though. They can also be edited, appended to and viewed too amongst other operations.
+
+For the purposes of this article lets look at a simple example that we might encounter in the real world.
+
+### From arrow functions to regular functions
+
+Take a JavaScript file that has some arrow functions defined in it and you want to change the function definitions to use regular old
+functions instead. This is an ideal task for a macro so lets get right into it.
+
+We can start recording a macro by hitting the `q` key while in normal mode and then also hitting another letter to denote the register
+in which we want to store the recording. Let's use `a`.
+
+So let's get our cursor into position on the line that has the function signature on and start recording with `qa`. Now, move  our cursor to
+the start of the line with ```_```,  change the `const` for function with `ciwfunction`, remove the assignment operation with `f=xxhx` then
+jump to the end of the line with `$`. All we need to do now is remove the arrow. We can do this with `F=xxx` and finally end the macro
+recording by hitting `q` again. There is a bit to unpack there but the more you use Vim, these oprations become second  nature, the only diffference
+here is that we are also recording our actions so we can reuse them.
+
+```javascript
+// BEFORE
+// place cursor on signature line
+// start macro with qa
+// go to start of line
+// swap const for function
+// go to = symbol and delete it and the space around it
+// go to end of line
+// reverse line search for = and delete arrow
+// end recording by hitting q again
+const greet = (name = 'World') => {
+    return `Hello, ${name}!`
+}
+
+// AFTER
+// @a
+function greet(name = 'World') {
+    return `Hello, ${name}!`
+}
+```
+
+The best thing about a macro like this is that now we have recorded the operations we can reapply them wherever we like, so even with a complex
+function signature like below, we can apply our macro to get the same result. We access and apply our macro by hittng `@` and the name
+of the register so for the macro we just created, we could apply it using `@a` when in normal mode on the line we want to apply to.
+
+Take a more complex example like this
+
+```javascript
+// hit @a and see the magic happen
+// BEFORE
+const addToCart = (id, qty) => async (dispatch, getState) => {
+  const { data } = await axios.get(`/api/products/${id}`)
+
+  dispatch({
+    type: CART_ADD_ITEM,
+    payload: {
+      product: data._id,
+      name: data.name,
+      image: data.image,
+      price: data.price,
+      countInStock: data.countInStock,
+      qty,
+    },
+  })
+
+  localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+}
+
+// AFTER
+function addToCart(id, qty) => async (dispatch, getState) {
+  const { data } = await axios.get(`/api/products/${id}`)
+
+  dispatch({
+    type: CART_ADD_ITEM,
+    payload: {
+      product: data._id,
+      name: data.name,
+      image: data.image,
+      price: data.price,
+      countInStock: data.countInStock,
+      qty,
+    },
+  })
+
+  localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+}
+```
 
 ## Wrapping up
 Hopefully I have convinced you in this post that you don't actually need multi cursor support in Vim-like editors and that you have all the power needed for even complex search and 
