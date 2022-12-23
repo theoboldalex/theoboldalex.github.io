@@ -99,7 +99,7 @@ WHERE id IN (
     56789,
     328,
     9,
-    673456, -- you will need to remocve the trailing comma
+    673456, -- you will need to remove the trailing comma
 )
 ```
 
