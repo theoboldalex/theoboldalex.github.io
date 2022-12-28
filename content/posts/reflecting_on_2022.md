@@ -1,7 +1,7 @@
 ---
 title: "Reflecting_on_2022"
 date: 2022-12-21T14:13:17Z
-draft: false
+draft: true
 ---
 
 As we enter another new year, I like to reflect on the past 12 months in relation to my goals to see my successes, my failures and how I can improve
