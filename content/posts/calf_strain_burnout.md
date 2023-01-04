@@ -4,37 +4,19 @@ date: 2022-12-21T15:22:56Z
 draft: true
 ---
 
-I love running. I have loved running for as long as I can remember. It is the one of the most humbling, rewarding and enjoyable things in my life.
-That is why when at the tail end of October this year I picked up a nasty calf injury, I was disappointed. Not least because I was 
-building up my running in preparation for a half marathon in February 2023 but also because I see running as my super power but not for the
-reasons that you would think. To me the ultimate benefit of running is in the way it allows me to do some cognitive housekeeping. By this
-I mean that the flow state that I can find only through running provides an opportunity for me to look at problems in a different light.
-This is especially important to for a personality like mine that immerses myself in my work to the point of obsession (also, 
-to the detriment of other aspects of life in rare cases).
+I love running. It hasn't always been this way. Back when I was sixteen and had just joined the British Army, I saw running as a necessary evil, a means to an end but 
+over the past two decades my passion for running has developed through repetition and mastering the fundamentals. Most importantly I have learned that for me, the biggest beenfit
+of running is not in its physical stimuli but in the way that it develops mental discipline and robustness. This has never been more clearly illustrated to me than in the
+last quarter of 2022 when I suffered what is known in the running community as a `calf heart attack`. This injury stopped me from doing any running at all for nine weeks.
+The detrimental effect on my physical robustness was clear (also not helped by easy access to lots of Christmas food) but the bigger challenge for me was that it 
+had a significant impact on my mental clarity especially around my work and could have easily lead to burnout if it wasn't for some careful self-reflaction and help
+from my colleagues who thankfully noticed some red flags before I did.
 
-## The injury
+My injury struck in a busy time for my team. I had taken on some extra responsibilities, we had some new team members that I was helping to ramp up, I had just returned 
+from Defcon in the United States and recovered from a nasty bout of Covid and as someone with a rather obsessive personality, I tend to immerse myself in my work, sometimes
+in a less than healthy way. I usually combat this with running as it gets me away from my computer, allowing me to do some cognitve housekeeping. By this I mean that
+I can allow myself to think without distraction and let my mind wander or tackle problems in a more abstract way. Without the outlet provided by my daily run, I found that 
+I was simply working longer and longer hours and trying to do more and more work but without the mental clarity gained from running, I was actually delivering less value 
+than before.
 
-Running has a habit of humbling you just when you think you know best. I was six weeks into a half-marathon training block and everything was going great.
-I was dropping a little weight and I was handling the increased weekly mileage just fine. Then I started to get a slight niggle in my left calf. I ran through this 
-for a couple more easy days but it started to get progressively worse. I decided a rest day or two should be ample recovery time to get over this and 
-back into my training so took a few days off to recover but had a big hill rep session planned for Saturday and really didn't want to miss it.
-
-When Saturday came, I still had a little soreness but decided to do the session anyway. I thought that if I could just do a good solid warm up of a few miles staedy state running then I would
-be able to complete the session. How wrong I was. The warm up miles were fine and were actually some of the most enjoyable running I did during this training block but once the main hill session
-started, the pain started to intensify. Finally at the top of the eighth hill rep of ten, I felt a sharp pain in my calf and knew I was done. I was about a mile and a half from home and in a
-deep wooded valley. Unable to walk properly, it was a long, slow, embarrassing slog back up the mountain to get home.
-
-This has taught me a valuable lesson though, and that is that I must learn to listen to myself and keep an eye out for warning signs. This applies not only to my running but also
-to my work.
-
-## The Burnout backstory
-
-Just back from Defcon, got bad case of Covid
-
-## What is cognitive housekeeping?
-
-## Learnings from this
-
-I need an outlet outside of my work otherwise I can hyper focus on it to the detriment of myself and others and have sailed too close to 
-burnout this time.
 
