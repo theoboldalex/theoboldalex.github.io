@@ -1,7 +1,7 @@
 ---
 title: "NeoVim for PHP development in 2023"
 date: 2022-12-21T14:33:58Z
-draft: true
+draft: false
 ---
 
 NeoVim is the most loved text editor for the second year running according to the [Stack Overflow survey](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-collaboration-tools)
