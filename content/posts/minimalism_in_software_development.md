@@ -19,3 +19,6 @@ I am within a codebase and keeps things really simple.
 
 I did try to simplify things even further by getting my entire workflow just into PHPStorm; Text editing, HTTP requests, Database Client and all, but this was a step too far in stripping things back even for me (really, I just couldn't let
 go of NeoVim in the terminal but PHPStorm is fantastic and still gets used for what it excels at from time to time).
+
+So to sum up, I think trying to sculpt both my work and my workflow down to the bare essentials to still add maximum value is the key to maintianing a healthy balance between not enough and too much. the key is in knowing when to stop
+optimising for simplicity, and start shipping real work.
