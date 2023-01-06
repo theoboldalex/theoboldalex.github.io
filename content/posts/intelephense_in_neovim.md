@@ -1,6 +1,6 @@
 ---
 title: "NeoVim for PHP development in 2023"
-date: 2022-12-21T14:33:58Z
+date: 2022-12-19T14:33:58Z
 draft: false
 ---
 
