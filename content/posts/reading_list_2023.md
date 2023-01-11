@@ -18,7 +18,14 @@ Let's get into the list;
 
 ## Extreme Programming Explained
 
+I'm a huge fan of Kent Beck's work and this book has been on my reading list for quite some time. While I am familiar with the concepts
+of XP and have read much about it in the past, there is no substitute for the original.
+
 ## Modern Software Engineering
+
+This is the most recently released book in the list but is already being talked about as a future classic. I have been following Dave Farley's
+YouTube channel for some time now and always find his content interesting and engaging. I'm not sure what to expect from this one but I am 
+really looking forward to dig into it.
 
 ## Unit Testing Principles, Practices, and Patterns
 
