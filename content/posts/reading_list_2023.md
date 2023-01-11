@@ -1,7 +1,7 @@
 ---
 title: "Why I'm reading less in 2023"
-date: 2023-01-10T15:08:55Z
-draft: true
+date: 2023-01-11T15:08:55Z
+draft: false
 ---
 
 I read a lot. I know that 'a lot' is relative but I have found that in comparison to my colleagues, my two hours average reading a day puts me way above the average.
@@ -35,3 +35,9 @@ between unit tests and other types of tests, but also about how to test, what ma
 unit testing and London School style. There is more to glean from this book by re-reading for sure.
 
 ## Test Driven Development By Example
+
+The seminal text on writing software driven by tests. I read this one shortly after starting my current job and it was a great kick start 
+into the world of TDD. I found the most value in the first and last sections. What am I hoping to gain from re-reading this one? I'm not
+entirely sure yet but I think with my experience now, I can probably take more away from the second section of the book where Beck
+implements xUnit in Python.
+

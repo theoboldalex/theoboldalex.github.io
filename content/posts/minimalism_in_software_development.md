@@ -1,5 +1,5 @@
 ---
-title: "Minimalism_in_software_development"
+title: "Minimalism in software development"
 date: 2023-01-09T18:46:53Z
 draft: false
 ---
