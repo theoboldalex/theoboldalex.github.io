@@ -22,5 +22,57 @@ familiar with that reference, see below;
 The problem, like in the above meme was that the feedback loop was far too large. I didn't want to push the team in a certain direction,
 rather, I wanted the design to be led by the tests telling us what the next right step was. Unfortunately, when the steps are too big, we often 
 jump to conclusions and try to write code that isn't yet required. The ultimate result of this was that the design missed the mark as
-the team didn't tease outr the correct data structure by thinking about and writing tests, instead they wrote a songle test, then tried to write 
+the team didn't tease out the correct data structure by thinking about and writing tests, instead they wrote a single test, then tried to write 
 all of the application logic.
+
+For example, one of the class' simply had to build a calendar like structure. Where given a day of the year, we either have an object of data
+to store, or we don't. Those are our two most simple test cases and could get us rolling with a design straight off the bat. One might 
+decide to structure this data like below with a single entry for each day of the year.
+
+```json
+{
+    "2023-01-01": {},
+    "2023-01-02": {},
+    "2023-01-03": {
+        "data": "Something",
+        "price": 20.00
+    },
+    "2023-01-04": {},
+}
+```
+
+Instead, because we didn't respect the TDD cycle, we ended up trying to structure the data in terms of numeric keys for days of the month (from
+1 through 31), within each these we had an entry for each month of the year, and then within each of those keys, we stroed either an object of data
+or nothing like so;
+
+```json
+{
+    "1": {
+        "January": {
+        },
+        "February": {
+        },
+        "December": {
+        }
+    },
+    "2": {
+        "January": {
+        },
+        "February": {
+        },
+        "December": {
+        }
+    },
+    "3": {
+        "January": {
+            "data": "Something",
+            "price": 20.00
+        }
+    }
+}
+```
+
+As I'm sure you can appreciate, this structure becomes really unwieldy very quickly. Not to mention the extra work required here around how
+the calendar will be built taking into account month lengths and leap years. The first structure on the other hand is really easy to create
+using a PHP [DatePeriod](https://www.php.net/manual/en/class.dateperiod.php) object to define what we mean by a year. This simplifies our 
+implementation significantly and also makes the data easier to reason about.
