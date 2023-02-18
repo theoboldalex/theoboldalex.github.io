@@ -83,3 +83,79 @@ Notice the new line we added
 This tells composer that when our package is installed, we want to symlink the file at `bin/mydemo-cli` to the `/vendor/bin` directory and 
 make it executable. Also worth noting is that the `bin` key holds an array so we can simply list any further scripts we want Composer to
 link to `/vendor/bin`.
+
+## Implementnig the CLI script
+
+With the setup and config out of the way, we can get on with creating the CLI. 
+
+**Note: I use the term CLI very loosely here. For this demo, we are only going to create a basic script; However, you can go as deep as you
+like into this and have the script take arguments and flags**
+
+We need to create a file in the location we declared in the `composer.json` bin array so let's do that.
+
+```bash
+md bin
+vim bin/my-demo-cli
+```
+
+Inside the file, let's make a toy script which will simply show us the current time in a few major cities across the globe.
+
+```php
+#!/usr/bin/env php
+
+<?php
+
+$locations = [
+    'New York' => getDateTimeByTimeZone('America/New_York'),
+    'London' => getDateTimeByTimeZone('Europe/London'),
+    'Tokyo' => getDateTimeByTimeZone('Asia/Tokyo')
+];
+
+foreach ($locations as $location => $time) {
+    echo sprintf("%-10s %s\n", $location, $time);
+}
+
+function getDateTimeByTimeZone(string $timeZoneString): string {
+    return (new DateTimeImmutable())
+        ->setTimezone(new DateTimeZone($timeZoneString))
+        ->format(DateTimeInterface::RFC822);
+}
+
+```
+
+## Putting it all together
+
+At this stage, make sure that you have initialised a Git repository in your package directory and committed your changes. This is required
+before we can install and test our package in another repository. Ok, with that done, that is about it for the package itself so lets test i
+it out.
+
+You can do this by creating a new project and pulling in the dev branch of your package by first specifying in your project `composer.json`
+(**not the package `composer.json`**) the following;
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "../composer_packages_blog_post/"
+        }
+    ]
+}
+```
+
+Next, simply install the dev branch of your package into the project with the following command
+
+```bash
+composer req alextheobold/composer_packages_blog_post @dev
+```
+
+If you have followed each step correctly, you should now see inside your project's `vendor` directory a `bin` directory and inside that
+should be your executable binary. You can test this is working by running `./vendor/bin/my-demo-cli`.
+
+## Wrapping up
+
+It really is that simple to get started but this is just scratching the surface. There is so much more that you can do by taking in 
+command line arguments and making the CLI more interactive to user input which ultimately leads to your packages being more useful and 
+flexible to user demands.
+
+Good luck, and please let me know if you found this guide useful. You can find me on [twitter](https://twitter.com/theoboldalex)
