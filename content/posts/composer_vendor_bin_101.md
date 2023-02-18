@@ -126,7 +126,7 @@ function getDateTimeByTimeZone(string $timeZoneString): string {
 ## Putting it all together
 
 At this stage, make sure that you have initialised a Git repository in your package directory and committed your changes. This is required
-before we can install and test our package in another repository. Ok, with that done, that is about it for the package itself so lets test i
+before we can install and test our package in another repository. Ok, with that done, that is about it for the package itself so lets test
 it out.
 
 You can do this by creating a new project and pulling in the dev branch of your package by first specifying in your project `composer.json`
