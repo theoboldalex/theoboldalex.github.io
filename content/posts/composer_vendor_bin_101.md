@@ -84,7 +84,7 @@ This tells composer that when our package is installed, we want to symlink the f
 make it executable. Also worth noting is that the `bin` key holds an array so we can simply list any further scripts we want Composer to
 link to `/vendor/bin`.
 
-## Implementnig the CLI script
+## Implementing the CLI script
 
 With the setup and config out of the way, we can get on with creating the CLI. 
 
