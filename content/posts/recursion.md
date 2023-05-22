@@ -18,13 +18,23 @@ a base case. The base case is the condition under which we want our function to 
 ```python
 def blast_off(num):
     print(num)
+    time.sleep(1)
+
     if num == 0:
         print('BLAST OFF!')
         return
 
     return blast_off(num - 1)
 ```
+**** shows how recursion works with the stack. Only prints at the end of program execution. Recursion and Maslow's Hammer ****
 
 1. Some basic examples
 2. Clojure and tail recursion
 3. The three steps to make it easier
+
+## The Three Steps
+
+### The Base Case
+
+Defining a solid base case is imperative to writing recursive code. Without a base case, our function would call itself indefinitely leading
+our program to eventually run out of memory and cause what is known as a stack overflow (No, not _that_ toxic hellscape).
