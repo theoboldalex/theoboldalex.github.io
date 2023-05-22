@@ -47,6 +47,13 @@ were pushed onto the stack.
 Defining a solid base case is imperative to writing recursive code. Without a base case, our function would call itself indefinitely leading
 our program to eventually run out of memory and cause what is known as a stack overflow (No, not _that_ toxic hellscape).
 
+## The Three Steps in action
+
+```python
+def factorial(num):
+    pass
+```
+
 ## Maslow's Hammer
 
 It is tempting once you have grasped recursion to want to use your new found tool everywhere but in my opinion, this is the wrong approach.
