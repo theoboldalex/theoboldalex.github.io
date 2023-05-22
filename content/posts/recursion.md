@@ -4,7 +4,7 @@ date: 2023-05-14T18:53:14+01:00
 draft: true
 ---
 
-Recursion is a concept that can be either grasped or elude you. Conceptually, recursion is as simple as a function calling itself. 
+Recursion is one of those concepts that you either grasp or you don't. Conceptually, recursion is as simple as a function calling itself. 
 However, understanding the intricacies of how, when, and why to use recursion can be challenging. Two influential factors that 
 aided my understanding were [this book](https://media.pragprog.com/newsletters/2020-08-13.html) and learning Clojure.
 
@@ -12,7 +12,7 @@ aided my understanding were [this book](https://media.pragprog.com/newsletters/2
 
 Suppose we want to write a program for a rocket launch which counts down from ten to zero before taking off. Most of us (myself included)
 would write a loop starting at ten and decrements a counter in each iteration only stopping when we reach zero but there is also another
-way to do this. Enter recursion. Instead of using a loop, we can have our function call itself with ever decreasing arguments unitl we hit
+way to do this. Enter recursion. Instead of using a loop, we can have our function call itself with ever decreasing arguments until we hit
 a base case. The base case is the condition under which we want our function to stop calling itself and return.
 
 ```python
@@ -26,13 +26,21 @@ def blast_off(num):
 
     return blast_off(num - 1)
 ```
-**** shows how recursion works with the stack. Only prints at the end of program execution. Recursion and Maslow's Hammer ****
 
-1. Some basic examples
-2. Clojure and tail recursion
-3. The three steps to make it easier
+The above example prints its argument to the console (in this case a number). Next it checks whether the number is zero. If it is the
+function returns. This is called the base case. In any other scenario, the function simply calls itself with its own argument but decremented 
+by one. Eventually, we will call ourself with an argument of zero, satisfy the condition of our base case and exit our function.
+
+The way this works though is interesting. Each time the function is called, that call is pushed onto the call stack just like any other function.
+The difference here though is that multiple calls of our function will be added to the stack until the base case is satisfied and the function
+returns. At this stage, all other invocations of the function will return and be popped from the stack in the opposite order that they 
+were pushed onto the stack.
 
 ## The Three Steps
+
+### Make Believe
+
+### Off by One
 
 ### The Base Case
 
