@@ -51,7 +51,10 @@ our program to eventually run out of memory and cause what is known as a stack o
 
 ```python
 def factorial(num):
-    pass
+    if num == 1:
+        return 1
+
+    return num * factorial(num - 1)
 ```
 
 ## Maslow's Hammer
