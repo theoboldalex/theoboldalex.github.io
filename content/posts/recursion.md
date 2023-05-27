@@ -62,3 +62,6 @@ def factorial(num):
 It is tempting once you have grasped recursion to want to use your new found tool everywhere but in my opinion, this is the wrong approach.
 Yes, use recursion, but for problems it is well suited to. Forcing a soluiton rarely ends well. The idea is that as programmers, we learn many 
 techniques but just as importantly, learn where each of these techniques work well.
+
+In some circumstances, using recursion can make your code wildly inefficient, for example, when you have overlapping subproblems. This is where 
+using Dynamic Programming techiques such as Memoisation to cut down the amount of recursion can be beneficial, but that is another post in itself.
