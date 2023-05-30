@@ -1,7 +1,7 @@
 ---
 title: "How I (finally) Grokked Recursion"
-date: 2023-05-14T18:53:14+01:00
-draft: true
+date: 2023-05-30T18:53:14+01:00
+draft: false
 ---
 
 Recursion is one of those concepts that you either grasp or you don't. Conceptually, recursion is as simple as a function calling itself. 
@@ -11,7 +11,7 @@ aided my understanding were [this book](https://media.pragprog.com/newsletters/2
 ## A Starter for Ten
 
 Suppose we want to write a program for a rocket launch which counts down from ten to zero before taking off. Most of us (myself included)
-would write a loop starting at ten and decrements a counter in each iteration only stopping when we reach zero but there is also another
+would write a loop starting at ten and decrement a counter in each iteration only stopping when we reach zero; but there is also another
 way to do this. Enter recursion. Instead of using a loop, we can have our function call itself with ever decreasing arguments until we hit
 a base case. The base case is the condition under which we want our function to stop calling itself and return.
 
@@ -40,20 +40,32 @@ were pushed onto the stack.
 
 ### Make Believe
 
+The first step to easily solving problems with recursion is to stop thinking about recursion. Make the assumption that the implementation of
+your function already exists and works correctly.
+
 ### Off by One
+
+Next up, figure out what the solution would be for the penultimate solution. For example, lets say we want to create a recursive function
+that returns a factorial of a given number `n`. The penultimate step in this solution would simply be to call our function with `n` being one smaller
+that the final case i.e. `factorial(n - 1)`. All we have to do from this point on would be to multiply n by the "off-by-one" solution to 
+finish our function because we know that to calculate a factorial, we simply multiply each number from `n` down to one together.
 
 ### The Base Case
 
-Defining a solid base case is imperative to writing recursive code. Without a base case, our function would call itself indefinitely leading
+If our factorial function was called at this point though, it would not be particularly useful as it would run indefinitely due to us not creating 
+a base case. Defining a solid base case is imperative to writing recursive code. Without a base case, our function would call itself indefinitely leading
 our program to eventually run out of memory and cause what is known as a stack overflow (No, not _that_ toxic hellscape).
 
 ## The Three Steps in action
 
 ```python
 def factorial(num):
+    # STEP_THREE: A solid base case
     if num == 1:
         return 1
 
+    # STEP_ONE: Assume the function is already implemented
+    # STEP_TWO: Find the solution to the penultimate iteration
     return num * factorial(num - 1)
 ```
 
@@ -65,3 +77,9 @@ techniques but just as importantly, learn where each of these techniques work we
 
 In some circumstances, using recursion can make your code wildly inefficient, for example, when you have overlapping subproblems. This is where 
 using Dynamic Programming techiques such as Memoisation to cut down the amount of recursion can be beneficial, but that is another post in itself.
+
+## Wrapping up
+
+There is a ton more to say about recursion and it will no doubt continue to baffle novice and experienced programmers alike for decades to come.
+However, if you keep the three steps in mind, hopefully you too will have an easier time _writing_ recursive code which is in my opinion harder than
+reading and understanding it.
