@@ -154,5 +154,8 @@ unused resources once you are done with them. Terraform offers a handy command f
 ## Wrapping up
 
 Terraform is a nice and simple tool for building cloud infrastructure and is more declarative than competitors AWS CDK and Pulumi. I'm not sure 
-whether I prefer Terraform over CDK yet but it is certainly more flexible, being able to used outside of the AWS ecosystem. You can find the 
-accompanying code to this post [here](https://github.com/theoboldalex/terraform_in_5_mins)
+whether I prefer Terraform over CDK yet but it is certainly more flexible, being able to be used outside of the AWS ecosystem. One thing to note
+is that you will usually be deploying your terraform plan via a pipeline rather than firing off commands from your terminal YMMV but I have found 
+CDK to be just as simple, if not more so to run in a pipeline than terraform.
+
+You can find the accompanying code to this post [here](https://github.com/theoboldalex/terraform_in_5_mins)
