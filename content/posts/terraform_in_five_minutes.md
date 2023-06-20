@@ -57,16 +57,16 @@ variable "aws_region" {
 }
 ```
 
-Variables are a good starting point for learning terraform as the show the format of a unit of HCL quite clearly. Things do get a little more
+Variables are a good starting point for learning terraform as they show the format of a unit of HCL quite clearly. Things do get a little more
 complex than this, but not by a huge amount.
 
-First up we define what is we are creating using the keyword `varibale`. There are a number of other keywords such as `resource` and `data`
-which we will shortly.
+First up we define what is we are creating using the keyword `variable`. There are a number of other keywords such as `resource` and `data`
+which we will see shortly.
 
 Next up, we have the variable name. In this case `aws_region`. The body of each unit of terraform code is wrapped in curly braces much like in any
 C style programming language. The properties that can be set on an object can be looked up in the Terraform docs or via your LSP autocomplete engine.
 Here we just define the data type, a description of the variable and a default value (this can be overridden if needed). We can access variables
-throughout our Terrraform project with the keyword `var` and the variable name accessed via dot notation so for our example, we would
+throughout our Terraform project with the keyword `var` and the variable name accessed via dot notation so for our example, we would
 access our region via `var.aws_region`.
 
 ## Building resources
@@ -134,7 +134,7 @@ Next, we can run `terraform validate` this command does exactly what it says on 
 it is syntactically valid code. A good time saver if you plan to run your configuration through a CI/CD process. Save time and money by validating your 
 code locally before you push to your remote.
 
-`terraform plan` will print out the execution and deployment plan for you defined infrastructure. This is useful for understanding you application
+`terraform plan` will print out the execution and deployment plan for your defined infrastructure. This is useful for understanding your application
 and the resources that will be deployed when we apply our changes.
 
 Finally, `terraform apply` will deploy the plan's resources. Once this command runs successfully, you should be able to see your resources
