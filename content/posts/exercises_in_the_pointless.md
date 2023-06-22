@@ -4,6 +4,8 @@ date: 2023-06-22T13:51:57+01:00
 draft: false
 ---
 
+## Reflecting on side projects
+
 I have been a programmer now for nearly a decade. In that time, I have completed countless side projects (and started many more than that)
 To this day, I am yet to create anything particulalry useful or interesting. Part of me has felt a bit disappointed about this at times and 
 sometimes it feels like I'm "falling behind". But what is the point of a side project? Well, for me it is about learning and exploration.
@@ -18,11 +20,13 @@ command line utilities to bring the PHP docs to my terminal?
 The great things about projects like this is the speed at which you are able to iterate and hack away on something. Scripting languages 
 are unbeatable for tasks like this so Bash was an easy choice (although I do enjoy scripting in Lua too)
 
-This project simply stated with a single curl command and then I iterated from there.
+This project simply started with a single curl command and then I iterated from there.
 
 ```bash
 curl https://www.php.net/manual/en
 ```
+
+## The user journey
 
 Before diving into the code, lets have a look at how I envisaged this working. Firstly, I wanted ot be able to call a simple script from anywhere
 in my terminal. This is easy enough. Create a script either in a directory on your path, or in a new location and add that to your path.
@@ -51,3 +55,6 @@ the resulting documentation. This is much more like the man page interface I am 
 And that is it!
 
 ## So, how did I approach it?
+
+Well, as I mentioned, I started with a simple script that just curled the root of the PHP docs site. The way I iterate on scripts like this is 
+simply running them from within vim.
