@@ -1,7 +1,7 @@
 ---
 title: "Exercises in the Pointless"
 date: 2023-06-22T13:51:57+01:00
-draft: false
+draft: true
 ---
 
 ## Reflecting on side projects
