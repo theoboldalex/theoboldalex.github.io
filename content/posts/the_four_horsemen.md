@@ -1,16 +1,9 @@
 ---
 title: "The Four Horsemen"
-date: 2023-07-06T21:03:55+01:00
-draft: true
+date: 2023-07-27T19:03:55+01:00
+draft: false
 ---
 
-## Jira 
-## Scrum
-## Deadlines
+Just a little fun.
 
-I have an interesting relationship with deadlines. On the one hand, without them, I have a tendency to procrastinate when project timelines
-are left totally open ended; However, on the other hand, deadlines on software projects often lead to cutting corners, poor quality control and 
-lots of "we will fix it later" (Spolier alert: we never do).
-
-## Hybrid
-
+![The Four Horsemen](/four_horsemen.jpeg)
