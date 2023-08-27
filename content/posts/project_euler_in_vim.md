@@ -121,7 +121,7 @@ TADA! Your solution appears before you. If you have done this correctly, you sho
 
 ## Wrapping up
 
-This was a super fun brain teaser and shows just what is capable from merely a text editor. Sometimes setting limitations like this forces us to get 
+This was a super fun brain teaser and shows just what is capable from a mere text editor. Sometimes setting limitations like this forces us to get 
 creative with solutions to real problems which I believe is a skill worth sharpening. No doubt I will come across problems in my day job where
 there are limitations and I need to solve a problem. You can never be too prepared. 
 
