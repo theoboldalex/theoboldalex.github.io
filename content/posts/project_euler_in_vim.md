@@ -110,7 +110,7 @@ For the next and final step I'm to take advantage of vim's registers so first, I
 I'll do this by typing `qaq`. This will clear the `a` register by starting a macro recording and then immediately ending it this flushing that
 register.
 
-To fill the `a` register, I'll type `"ayy" to yank the entire line into the register and then `o` to enter insert mode on a new line.
+To fill the `a` register, I'll type `"ayy` to yank the entire line into the register and then `o` to enter insert mode on a new line.
 
 While still in insert mode, I can type `<C-r>` to give me access to my registers and then type `=`. You should see the equals symbol appear in 
 the command prompt at the bottom of the Vim window. Then we just need to paste the contents of the `a` register into this command prompt to evaluate
