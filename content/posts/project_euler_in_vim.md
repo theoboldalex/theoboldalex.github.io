@@ -7,7 +7,7 @@ draft: false
 Another rainy British weekend, another wholly unnecessary project. This time, I thought it would be fun to find out whether I could solve
 some simple problems starting from an empty Vim buffer and running some commands to get to the correct answer. It required a little thought and 
 getting creative with substitute commands and registers but this process will show just just how powerful Vim's text editing features are and this only
-scrathes the surface of what is possible.
+scratches the surface of what is possible.
 
 ## The Problem
 
@@ -24,7 +24,7 @@ If I wasn't trying to stay fully inside Vim, I might have called out to seq from
 line and calling seq. `:.!seq 1 999` Instead, I will enter insert mode and use some of the simple repeat and increment commands to achieve a similar result.
 
 If you enter insert mode, type a `0`, hit enter then return to normal mode, you can fill 999 lines with a zero by then typing `998.`. The period 
-character in Vim repeats the last action (which was entering a zero followed by a newline). Preceeding this with a number tells Vim how many 
+character in Vim repeats the last action (which was entering a zero followed by a newline). Preceding this with a number tells Vim how many 
 times you want it to repeat the last action. We should now have a buffer which contains 999 lines, each containing a zero.
 
 Next, we will want to make this list of zeros into an incrementing range of numbers. To do this, go right back to the start of the buffer with `gg`
@@ -41,7 +41,7 @@ This is where the substitute command comes in...
 ```
 
 What the above command does is replaces any lines which are neither a multiple of 3 or 5 with an empty line. This make it possible for us to then
-remove those blanks in the next step. The intersting bit of the above command is how you can evaluate expressions in sub commands with `\=`. This is 
+remove those blanks in the next step. The interesting bit of the above command is how you can evaluate expressions in sub commands with `\=`. This is 
 the bit that lets us do mathematical operations on each match and apply a substitute accordingly.
 
 For now, your buffer should start to look like the below.
@@ -113,7 +113,7 @@ register.
 To fill the `a` register, I'll type `"ayy" to yank the entire line into the register and then `o` to enter insert mode on a new line.
 
 While still in insert mode, I can type `<C-r>` to give me access to my registers and then type `=`. You should see the equals symbol appear in 
-the command prompt at the bottom of the Vim window. Then we just need to paste the contents of the `a` register into this command propmt to evaluate
+the command prompt at the bottom of the Vim window. Then we just need to paste the contents of the `a` register into this command prompt to evaluate
 the expression. We do this with `<C-r>a<CR>`.
 
 TADA! Your solution appears before you. If you have done this correctly, you should see the number 233168.
@@ -121,8 +121,8 @@ TADA! Your solution appears before you. If you have done this correctly, you sho
 
 ## Wrapping up
 
-This was a super fun brain teaser and shows just what is acapable from merely a text editor. Sometimes setting limitations like this forces us to get 
+This was a super fun brain teaser and shows just what is a capable from merely a text editor. Sometimes setting limitations like this forces us to get 
 creative with solutions to real problems which I believe is a skill worth sharpening. No doubt I will come across problems in my day job where
-there are limitiations and I need to solve a problem. You can never be too prepared. 
+there are limitations and I need to solve a problem. You can never be too prepared. 
 
 Maybe [real programmers](https://xkcd.com/378/) do use a magnetic needle and a steady hand (or even butterflies) but I prefer Vim.
