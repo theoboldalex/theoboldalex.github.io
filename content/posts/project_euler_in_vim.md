@@ -33,7 +33,7 @@ of zeros into that incrementing list we wanted. Nice!
 
 ## Filtering the multiples of 3 and 5
 
-Ok, that out of the way we can now look to filter our range so that we only have the multiples of 3 and 5 that we wanted.
+Ok, that out of the way we can look to filter our range so that we only have the multiples of 3 and 5 that we wanted.
 This is where the substitute command comes in...
 
 ```vim
