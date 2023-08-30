@@ -17,4 +17,9 @@ The problem states...
 
 > **By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.**
 
+## Getting started with the sequence
+
+Much like last time, we need to start by generating a sequence of numbers. This time though, the the sequence isn't simply incrementing intergers
+but is a more complex sequence. Unfortunately there isn't a command built in to Vim that will help us here so we will have to do it ourselves.
+
 
