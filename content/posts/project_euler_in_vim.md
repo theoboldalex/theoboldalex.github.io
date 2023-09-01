@@ -125,4 +125,4 @@ This was a super fun brain teaser and shows just what is capable from a mere tex
 creative with solutions to real problems which I believe is a skill worth sharpening. No doubt I will come across problems in my day job where
 there are limitations and I need to solve a problem. You can never be too prepared. 
 
-Maybe [real programmers](https://xkcd.com/378/) do use a magnetic needle and a steady hand (or even butterflies) but I prefer Vim.
+Maybe [real programmers](https://xkcd.com/378/) do use a magnetized needle and a steady hand (or even butterflies) but I prefer Vim.
