@@ -24,5 +24,7 @@ but is a more complex sequence. Unfortunately there isn't a command built in to 
 
 To create the sequence we will record a macro, but first we need a single, simple equation to work from. If you are familiar with the fibonacci sequence, it is often exaplained as starting from zero and one summed, followed by the result of that summed with one and then on and on continually summing the previous two numbers in the sequence.
 
-Leet's start then by opening vim and entering insert mode on the first line of our fresh buffer. On this line, we will enter the text `1+1`. As simple an equation as we will ever see.
+Let's start then by opening vim and entering insert mode on the first line of our fresh buffer. On this line, we will enter the text `1+1`. As simple an equation as we will ever see. We need this base in order to build up our sequence in the macro that we will write next.
+
+For the purpose of clarity and brevity, this tutorial will just consider the first 10 items in the fibonacci sequence, but the same principle applies no matter how big we build our sequence.
 
