@@ -1,7 +1,7 @@
 ---
 title: "Solving Project Euler Problems With Nothing But Vim - Part 2"
-date: 2023-09-20T20:37:46+01:00
-draft: true
+date: 2023-09-19T22:37:46+01:00
+draft: false
 ---
 
 Ok, last time's Project Euler solution using nothing but Vim was so fun to do, I decided to up the ante this week and attempt
