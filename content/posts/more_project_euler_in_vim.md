@@ -31,6 +31,25 @@ For the purpose of clarity and brevity, this tutorial will just consider the fir
 The resulting content of the register `w` into which we will record our macro will be as follows but lets also step through this and take a look at each step in isolation. (To see the content of your registers at any stage run the command `:reg`)
 
 ```
-"wyyo^R=^Rw^M+^[k0yiwj$p
+V"wyo^R=^Rw^M+^[k0yiwj$p
 ```
+
+### Step one
+`V"wy`
+The first step is to get our typed expression into a register of our choosing. I did this by visually selecting the first line of the buffer with `V` and then yanking the selection into the `w` register with `"wy`. I chose the `w` register purely because it is close to both `q` and `a` on the qwerty keyboard layout and I was using `q` to record the macro into register `a`.
+
+### Step two
+`o^R=^Rw^M+^[`
+Step two is a little more involved and uses vim's expression registers to help us calculate the arithmatic operation captured inside our register. To achieve this, we enter insert mode on a new line with `o` and use `<C-r>` to access our registers. The `=` operator tells vim to treat our next command as an expression. We next need to access our registers again with another `<C-r>` and paste in the contents of our chosen register with `w`.
+
+When we now hit enter, the result of our expression register should be rendered in our buffer. If this step has worked our buffer should look like this.
+
+```
+1+1
+2
+```
+
+### Step three
+`k0yiwj$p`
+Ok, so at this stage we have managed to calculate the next value in the sequence, but how do we take this and make it into a repeatable action we can execute N times?
 
