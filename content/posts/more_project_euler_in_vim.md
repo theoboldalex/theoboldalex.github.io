@@ -1,10 +1,10 @@
 ---
 title: "Solving Project Euler Problems With Nothing But Vim - Part 2"
-date: 2023-08-30T20:37:46+01:00
+date: 2023-09-20T20:37:46+01:00
 draft: true
 ---
 
-Ok, last week's Project Euler solution using nothing but Vim was so fun to do, I decided to up the ante this week and attempt
+Ok, last time's Project Euler solution using nothing but Vim was so fun to do, I decided to up the ante this week and attempt
 to solve the second problem in the Euler archive (Even Fibonacci Numbers). 
 This one is much more tricky; so get your [Macros](https://vim.fandom.com/wiki/Macros) ready and let's dive in.
 
@@ -90,4 +90,52 @@ Make sure to end your recording of the macro by hitting `q` and then we can comp
 
 Here you will see that the left hand side of each expression is the current term in the sequence and the right hand side is the previous term.
 
+## Doing the math
+
+### Signal vs Noise
+`:%s/[^0-9]\d*//g`
+
+Before we can do our filtering and summing we need to remove some of the now extraneous noise in our buffer. The above substitute command simply removes anything including the `+` symbol and following numbers fron each buffer line.
+
+```
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+```
+
+### Keeping the evens
+`%s/\v\d+/\=submatch(0) % 2 == 0 ? submatch(0) : ''`
+
+This command will be familiar from [my last vim solve]({{< ref "project_euler_in_vim" >}}). All this is doing is replacing lines which do not match an even number with a blank line.
+
+```
+
+2
+
+
+8
+
+
+34
+
+
+```
+
+### Stripping the blanks
+`:%g/^\s*$/d`
+
+Again, this global command should look familiar. We are just deleting any lines that are either blank or contain only whitespace.
+
+```
+2
+8
+34
+```
 
