@@ -157,7 +157,7 @@ In a similar vein to how we generated the terms in the sequence, we are going to
 This command visually selects the whole expression on the first line of our buffer and captures it into register `e`.
 We then replace the contents of the first buffer line using `S`. The replacement is again just using `<C-r>` to access our registers and use `=` to evaluate the contents of them.
 
-The result of this command should replace the buffer content with the number `44`.
+The result of this command should replace the buffer content with the number `44` and with that, we are done.
 
 ## Concluding
 
