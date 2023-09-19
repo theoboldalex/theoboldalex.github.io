@@ -48,8 +48,46 @@ When we now hit enter, the result of our expression register should be rendered 
 1+1
 2
 ```
+While still in insert mode we add a `+` symbol to the line in preparation for the next step and finally return to normal mode. The resulting buffer is.
+
+```
+1+1
+2+
+```
 
 ### Step three
 `k0yiwj$p`
 Ok, so at this stage we have managed to calculate the next value in the sequence, but how do we take this and make it into a repeatable action we can execute N times?
+
+Well, we need to build the calculation for the next value in the sequence and knowing we can calculate this from `n[i] + n[i-1]` we can deduce that the first number on the previous line, is the previous value in the sequence. Knowing this we can;
+
+- `k0` go to the start of the previous line
+- `yiw` yank the contents of the first `<word>`
+- `j$` return to the end of the second line in the buffer
+- `p` and paste the yanked content
+
+We have now built the repeatable calculation for generating N terms of the fibonacci sequence.
+
+```
+1+1
+2+
+```
+
+Make sure to end your recording of the macro by hitting `q` and then we can complete the generation of the first ten terms in the sequence with the command `8@a`.
+
+```
+1+1
+2+1
+3+2
+5+3
+8+5
+13+8
+21+13
+34+21
+55+34
+89+55
+```
+
+Here you will see that the left hand side of each expression is the current term in the sequence and the right hand side is the previous term.
+
 
