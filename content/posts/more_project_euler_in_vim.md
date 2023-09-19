@@ -70,7 +70,7 @@ We have now built the repeatable calculation for generating N terms of the fibon
 
 ```
 1+1
-2+
+2+1
 ```
 
 Make sure to end your recording of the macro by hitting `q` and then we can complete the generation of the first ten terms in the sequence with the command `8@a`.
