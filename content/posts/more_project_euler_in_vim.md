@@ -142,9 +142,30 @@ Again, this global command should look familiar. We are just deleting any lines 
 ### Finishing touches
 `:%s/^/+/|%s/\n/`
 
-A qick double substitution which adds a `+` symbol to the start of each line in the buffer and with the pipe `|` I can pass a second command which strips newlines from the file and we finally have our final expression ready to evaluate
+A qick double substitution which adds a `+` symbol to the start of each line in the buffer and with the pipe `|` I can pass a second command which strips newlines from the file and we finally have our final expression ready to evaluate.
 
 ```
 +2+8+34
 ```
+
+### Calculating the expression
+
+In a similar vein to how we generated the terms in the sequence, we are going to again reach for the expression register to help us complete our calculation and solve the problem once and for all.
+
+`V"eyS^R=^Re^M^[`
+
+This command visually selects the whole expression on the first line of our buffer and captures it into register `e`.
+We then replace the contents of the first buffer line using `S`. The replacement is again just using `<C-r>` to access our registers and use `=` to evaluate the contents of them.
+
+The result of this command should replace the buffer content with the number `44`.
+
+## Concluding
+
+Ok, I know what you are thinking. We hand waved away the most difficult part of solving this one which is stopping the generation of the sequence terms when we hit the four million limit, but I haven't yet figured out a nice way to achieve this. Rest assured I will be back with another post once I have nailed a solution to that one.
+
+My real reason for writing this post though was because it would act as the perfect segue for me to talk about the fibonacci sequence and its audacious misuse as an estimation tool for scrum teams; a practice that I can only describe as a flagrant and unapologetic affront to the very essence of software development.
+
+Tune in next time to find out why that is a hill I may very well just end up dying on.
+
+:wq
 
