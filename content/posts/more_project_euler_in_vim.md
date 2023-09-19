@@ -139,3 +139,12 @@ Again, this global command should look familiar. We are just deleting any lines 
 34
 ```
 
+### Finishing touches
+`:%s/^/+/|%s/\n/`
+
+A qick double substitution which adds a `+` symbol to the start of each line in the buffer and with the pipe `|` I can pass a second command which strips newlines from the file and we finally have our final expression ready to evaluate
+
+```
++2+8+34
+```
+
