@@ -165,7 +165,7 @@ Ok, I know what you are thinking. We hand waved away the most difficult part of 
 
 My real reason for writing this post though was because it would act as the perfect segue for me to talk about the fibonacci sequence and its audacious misuse as an estimation tool for scrum teams; a practice that I can only describe as a flagrant and unapologetic affront to the very essence of software development.
 
-Tune in next time to find out why that is a hill I may very well just end up dying on.
+Tune in next time to find out why that is a hill I may well end up dying on.
 
 :wq
 
