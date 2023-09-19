@@ -28,3 +28,9 @@ Let's start then by opening vim and entering insert mode on the first line of ou
 
 For the purpose of clarity and brevity, this tutorial will just consider the first 10 items in the fibonacci sequence, but the same principle applies no matter how big we build our sequence.
 
+The resulting content of the register `w` into which we will record our macro will be as follows but lets also step through this and take a look at each step in isolation. (To see the content of your registers at any stage run the command `:reg`)
+
+```
+"wyyo^R=^Rw^M+^[k0yiwj$p
+```
+
