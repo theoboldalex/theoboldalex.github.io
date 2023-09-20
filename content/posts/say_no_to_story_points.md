@@ -1,7 +1,7 @@
 ---
 title: "Say No To Story Points"
 date: 2023-09-20T00:50:18+01:00
-draft: true
+draft: false
 ---
 
 Welcome to the Scrum universe, where there are just two unwavering certainties: developers will come to despise it, and if they dare to 
@@ -37,7 +37,16 @@ I want to dig a little deeper into point three. Let's do the math:
 `an item of 5 points takes roughly twice as much effort from the team as an item of 3 points`
 
 Ok I'll let them get away with that one because they added the word `roughly`. I suppose 5 is _roughly_ double 3 in the same way that 
+8 is double 5 and 13 is double 8 and 20 is double 13. At least the difference doubles every iteration so there is always that.
 
+Where `Bikeshedding Unbounded` really gets going though is when trying to find consensus on a constant within the relative scoring system that
+the entire team can agree on as a beacon around which all other backlog items can find their relative places.
+
+If (and it is a big if) you can find enough common ground to avoid attmepted strangulation of your team mates and come to a consensus on what constitues a 
+"five-pointer", you will likely then descend into my least favorite part of the whole process. The mental gymnastics associated with the `Pyrite Ratio`.
+
+Taking the Scrum guide at face value, we can say that a backlog item of 5 points is double the effort of an item worth three points. Please tell me then;
+does a backlog item of 8 points represent double the effort of a 5 point item or the combined effort of a 5 and a 3 point item?
 
 ## Taoist Tale
 
@@ -74,6 +83,24 @@ meetings and selling certificates to corporate clients.
 
 ## An Alternate Approach
 
-The primary purpose of any software team should be to deliver working software that provides business value. 
+The primary purpose of any software team should be to deliver working software that provides business value. How long this takes should be directly
+proportionate to the complexity of the problem being solved. It is my opinion that teams should maximise cognitive effort spent on understanding
+the problem and stating it in simple terms. I like Rich Hickey's [Hammock Driven Development](https://www.youtube.com/watch?v=f84n5oFoZBc)
+approach to this but each team will find what works for them.
+
+If you are interested in casting off the shackles of story points here is my number one tip:
+
+Continue to use story points. No, really.
+
+It is unlikely that your boss will allow you to stop using them. Instead, point every story as 1 point. 
+Your burn down chart will still function in much the same way it always has, keeping your boss happy and you will never have to think about points ever again.
+
+If you do get any push back on your new found freedom from story points, simply direct your agressor's attention once again to the official Scrum guide blog which
+states:
+
+`Story Points are of no value whatever to a business because they can’t be used to predict cost or delivery dates. Even the Scrum team cannot make any predictions as to how many Story Points it can complete in a sprint`
+
+
+
 
 :wq
