@@ -6,7 +6,7 @@ theme = 'cactus'
 [params]
   author = "Alex Theobold"
   info = "Programmer"
-  description = "Musings from a programmer's descent into madness"
+  description = "Confessions of a Programmer on the Brink"
   keywords = "blog,developer,personal"
   since = 2022
   copywrite = "Alex Theobold"
