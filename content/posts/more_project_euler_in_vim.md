@@ -19,7 +19,7 @@ The problem states...
 
 ## Getting started with the sequence
 
-Much like last time, we need to start by generating a sequence of numbers. This time though, the the sequence isn't simply incrementing intergers
+Much like last time, we need to start by generating a sequence of numbers. This time though, the sequence isn't simply incrementing intergers
 but is a more complex sequence. Unfortunately there isn't a command built in to Vim that will help us here so we will have to do it ourselves.
 
 To create the sequence we will record a macro, but first we need a single, simple equation to work from. If you are familiar with the fibonacci sequence, it is often exaplained as starting from zero and one summed, followed by the result of that summed with one and then on and on continually summing the previous two numbers in the sequence.
