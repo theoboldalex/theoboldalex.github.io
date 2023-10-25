@@ -1,7 +1,7 @@
 ---
 title: "Exercises in the Pointless"
 date: 2023-06-22T13:51:57+01:00
-draft: true
+draft: false
 ---
 
 ## Reflecting on side projects
@@ -11,13 +11,13 @@ To this day, I am yet to create anything particulalry useful or interesting. Par
 sometimes it feels like I'm "falling behind". But what is the point of a side project? Well, for me it is about learning and exploration.
 Not every project must be an open source success with a solid user base and nor should it. The most fun and insightful side projects I have
 worked on have had very little practical value and they are often the projects that have the worst coding standards, most buggy code and are
-thrown together quickly sometimes in matter of hours.
+thrown together quickly sometimes in a matter of hours.
 
 Take a recent project of mine that I did in a Friday afternoon. The premise is simple. I don't like the PHP documentation site. Being a
 "terminal guy" I am much happier using man pages and 'less'ing my way through docs so I thought, why not compose a bunch of my favorite
 command line utilities to bring the PHP docs to my terminal?
 
-The great things about projects like this is the speed at which you are able to iterate and hack away on something. Scripting languages 
+The great thing about projects like this is the speed at which you are able to iterate and hack away on something. Scripting languages 
 are unbeatable for tasks like this so Bash was an easy choice (although I do enjoy scripting in Lua too)
 
 This project simply started with a single curl command and then I iterated from there.
@@ -28,7 +28,7 @@ curl https://www.php.net/manual/en
 
 ## The user journey
 
-Before diving into the code, lets have a look at how I envisaged this working. Firstly, I wanted ot be able to call a simple script from anywhere
+Before diving into the code, lets have a look at how I envisaged this working. Firstly, I wanted to be able to call a simple script from anywhere
 in my terminal. This is easy enough. Create a script either in a directory on your path, or in a new location and add that to your path.
 I decided to place mine in `$HOME/.config/bin` as this is both on my `$PATH` and also in version control along with my dotfiles. Next up, I 
 created an alias for running the script to save myself a few keystrokes in typing `.sh` everytime I wanted to call my script into action.
@@ -36,7 +36,7 @@ created an alias for running the script to save myself a few keystrokes in typin
 So now we have a simple bash script that we can run anywhere just by typing `phpdoc` and hitting return. At present, this just fires off
 that curl command we saw earlier, but what I _wanted_ it to do was the following...
 
-1. Give me an interactive, filterable list of docs pages that I can fuzzy search through unitl I find the option I want. This is a task 
+1. Give me an interactive, filterable list of docs pages that I can fuzzy search through until I find the option I want. This is a task 
 perfectly suited to [fzf]("https://github.com/junegunn/fzf"). I decided it would be a good idea to separate the docs into sections for each
 part of the docs. Tp begin with I just created sections for function docs and class docs.
 
