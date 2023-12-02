@@ -15,3 +15,15 @@ Hopping on the high speed train to London is useless if your goal is to get to G
 Lots of measures of productivity. Commits, PRs, Jira issues closed. Very few if any measures of happiness.
 
 Burndown charts are the same. They tell only a small part of a story. They say absolutely nothing about the quality or value of work, just that people are busying away at... _something_.
+
+=============
+
+Productivity. It is not just a buzzword; it is the driving force behind a deluge of NYT bestsellers. Echoed relentlessly by every blogger,
+YouTuber and entrepreneurial grifter that can force their way into our gaze for what seems like the past decade. Even the workplace has not escaped
+the trend with bosses eyeing increased productivity to bring them their bonuses year after year and squeeze ever more from their "Human resources".
+
+The focus on productivity at all costs, especially when looking at developers is flawed. I believe that with a focus on joy, we not only create
+ more content teams but we also lead to high performing, productive teams.
+
+There are many measures of developer productivity, all of which are flawed.
+
