@@ -22,6 +22,9 @@ theme = 'cactus'
   name = "Github"
   link = "https://github.com/theoboldalex/"
 [[params.social]]
+  name = "Twitter"
+  link = "https://twitter.com/theoboldalex/"
+[[params.social]]
   name = "linkedin"
   link = "https://linkedin.com/in/theoboldalex/"
 
