@@ -25,5 +25,6 @@ the trend with bosses eyeing increased productivity to bring them their bonuses 
 The focus on productivity at all costs, especially when looking at developers is flawed. I believe that with a focus on joy, we not only create
  more content teams but we also lead to high performing, productive teams.
 
-There are many measures of developer productivity, all of which are flawed.
+There are many measures of developer productivity, all of which are flawed; however, this doesn't seem to stop the Scrum crowd trying to measure the
+success of teams with a small number of imperfect metrics.
 
