@@ -26,5 +26,10 @@ The focus on productivity at all costs, especially when looking at developers is
  more content teams but we also lead to high performing, productive teams.
 
 There are many measures of developer productivity, all of which are flawed; however, this doesn't seem to stop the Scrum crowd trying to measure the
-success of teams with a small number of imperfect metrics.
+success of teams with a small number of imperfect metrics. Let's take a look at some of these.
+
+### Velocity
+Ah, yes! Velocity, the siren song of Scrum masters the world over. The focus on moving ever faster misses the point entirely. Imagine thinking that 
+you could measure success by the speed of travel. Moving at 100mph towards London is useless if the goal is to get to New York. Instead, focus on 
+providing challenging, meaningful work that has a business impact and productivity will take care of itself.
 
