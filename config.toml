@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'Alex Theobold'
 theme = 'cactus'
 
+[markup]
+  [markup.highlight]
+    style = 'vulcan'
+
 [params]
   author = "Alex Theobold"
   info = "Programmer"
@@ -27,4 +31,3 @@ theme = 'cactus'
 [[params.social]]
   name = "linkedin"
   link = "https://linkedin.com/in/theoboldalex/"
-
