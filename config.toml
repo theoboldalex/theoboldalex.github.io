@@ -14,7 +14,7 @@ theme = 'cactus'
   keywords = "blog,developer,personal"
   since = 2022
   copywrite = "Alex Theobold"
-  logo = "images/logo.jpg"
+  logo = "images/favicon.ico"
 
   colortheme = "dark"
   # mainSection = "home"
