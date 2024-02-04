@@ -14,9 +14,11 @@ theme = 'cactus'
   keywords = "blog,developer,personal"
   since = 2022
   copywrite = "Alex Theobold"
+  logo = "images/logo.jpg"
 
   colortheme = "dark"
-  mainSection = "posts"
+  # mainSection = "home"
+  mainSectionTitle = "Musings"
   showallpostsonhomepage = true
 
   customCSS = ["css/custom.css"]
