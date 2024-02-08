@@ -1,7 +1,7 @@
 ---
 title: "On Interactive Debugging"
 date: 2024-02-08T21:44:46Z
-draft: false
+draft: true
 ---
 
 ## A debate as old as time
