@@ -17,4 +17,6 @@ and a couple of Mac Minis and a G4 PowerPC Mac Pro. I bought my most recent Macb
 and Ruby on Rails web apps I was creating as a hobbyist developer.
 
 To say I had become comfortable in MacOS would be an understatement. I had configured my operating system over the years to be minimal (or as minimal as Apple will allow) and consistently disabled
-most features that many Mac users love and was heavily keyboard driven in my workflow. 
+most features that many Mac users love and was heavily keyboard driven in my workflow. I have continued to happily use MacOS into my career as a professional developer without any major issues but recently things 
+have started to change. While I still enjoy MacOS for work and love the build quality of Macbooks, I can no longer justify the cost of replacing my personal machine every few years with a well specced Apple device
+when there are cheaper, more powerful alternatives available. This is even more obvious now that my personal computer gets less use than it used to given I spend most of my time on my work machine.
