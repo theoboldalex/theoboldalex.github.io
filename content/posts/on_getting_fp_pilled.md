@@ -1,17 +1,14 @@
 ---
 title: "On Getting FP Pilled"
 date: 2024-11-19T22:22:25Z
-draft: true
+draft: false
 ---
 
-I make no secret of the fact that I am an enjoyer (and advocate for) functional programming techniques but as yet, I have not put down into words, what functional programming is to me, why I 
-evangelise it, how I found FP and why it has had such an impact on the way I write software.
+## The Beginnings: Problem-Solving and JavaScript Adventures
 
-## The Beginnings
-After a few failed attempts at learning to program with Python in the early 2010s and writing some basic SQL for work, my first real forays into programming came through 
-sites like [project euler](https://projecteuler.net/). I found the problem solving aspect of these challenges addictive but more than that, I wanted to find clever and creative ways to solve the problems, not 
-worrying too much about the performance or readability of the code I produced. Not exactly production ready corporate code but damn fun. I learned some JavaScript and went deep on Kyle Simpson's [You don't know JS](https://github.com/getify/You-Dont-Know-JS)
-series of books to help me find creative ways to leverage the language. A typical example might look something like the below for solving the classic FizzBuzz game.
+My journey into programming wasn’t smooth at first. After a few false starts learning Python in the early 2010s and dabbling in SQL for work, I discovered [Project Euler](https://projecteuler.net/). Its addictive problem-solving challenges resonated with me. I wasn’t just solving problems; I was experimenting with clever and creative ways to approach them. Performance and readability took a backseat to fun.
+
+This experimental phase led me to JavaScript, supported by Kyle Simpson’s seminal [You don't know JS](https://github.com/getify/You-Dont-Know-JS). These books encouraged me to explore the language deeply, sparking a fascination with higher-order functions, immutability, and method chaining. A prime example of this approach is solving the classic FizzBuzz:
 
 ```JavaScript
 [...Array(100).keys()]
@@ -19,44 +16,69 @@ series of books to help me find creative ways to leverage the language. A typica
     .map(i => i % 15 === 0 ? "FizzBuzz" : i % 3 === 0 ? "Fizz" : i % 5 === 0 ? "Buzz" : i)
 ```
 
-What I didn't appreciate at the time was that I was not only learning to program, but also building the functional mindset through using higher order functions, avoiding mutable state and through method
-chaining, I was essentially learning about pipes.
+At the time, I didn’t realize I was learning functional programming principles. Treating programs as pipelines of data transformations rather than state mutations came naturally. Later, as I ventured into Ruby and PHP, I realized just how much this mindset shaped my approach to coding. FP felt intuitive; object-oriented programming (OOP) took more effort to grasp.
 
-This approach to programming of treating a program as a series of data transformations rather than state mutations has always seemed natural to me having learned to program in this way (OOP took much longer to get to grips with when I moved onto Ruby and later PHP).
+## Discovering Clojure: Fun Rediscovered
 
-## Finding Clojure
+A pivotal moment came when I stumbled upon a Rich Hickey conference talk that introduced me to Clojure. This Lisp-inspired language rekindled the joy of programming that had been missing from my day job. It was my first truly functional language, and its expressiveness blew me away. The simplicity and elegance of Lisp matched my mental model for how programming languages should work.
 
-A couple of years ago I stumbled across a fantastic conference talk from Rich Hickey and found the Lisp like language he is the creator of Clojure. I even wrote the first ever post on this blog about 
-Clojure and how learning it had brought the fun back to programming that seemed to be missing from my day job at the time. Clojure was the first truly functional language I ever learned and to this day
-I still find its expressiveness second to none. Lisps just work the way that I expect programming languages to work and find that I enjoy programming more without all of the ceremony involved in many OOP
-languages. There are a couple of issues with Clojure though, namely that I prefer a somewhat batteries included framework when I am trying to build software so Clojure with its convention of sticking to a 
-small core and importing libraries was not as productive as I would like. Perhaps I had been spoiled by years of working with Rails and Laravel in this respect. Unfortunately, there does not seem to be much
-appetite for a more fully fledged framework in the Clojure community so this was a little off putting to me (I still love Clojure for solving pure programming problems such as Advent of Code though).
+That said, Clojure wasn’t without its challenges. Its minimalistic, library-focused ecosystem clashed with my preference for more "batteries-included" frameworks, honed during my time with Rails and Laravel. While Clojure remains my go-to for pure programming challenges like Advent of Code, I’ve found it less practical for larger software projects.
 
-## The Unix Shell
+## Functional Programming in the Unix Shell
 
-In 2023, I decided to attempt Advent of Code using only shell scripts with a heavy focus on Awk. I had learned Awk earlier in the year and had enjoyed using it to solve some real problems at work. The shell
-with its small but sharp, composable tools and pipes sounded a lot like the way I had been programming all along i.e. making a transformation on some input, passing it along a pipeline, doing another transformation and on and on until I have the final result.
+In 2023, I took on Advent of Code with a twist: solving challenges using shell scripting and Awk. This deepened my appreciation for Unix's philosophy of small, composable tools connected by pipes. The shell embodies functional programming principles: input transforms into output through a pipeline of operations.
 
-I only got a few days into Advent of Code but learned some really valuable techniques (not to mention wrote some gnarly regular expressions) and furthered my belief that functional programming is both simpler
-than some other paradigms, but also fits better the work that many of us do as software professionals.
+While I only made it a few days into Advent of Code, the experience sharpened my skills and reinforced my belief that FP is both simpler and better suited to many real-world programming tasks.
 
-## OCaml, Lisps, MIT
 
-This year, I have gone deeper down the rabbit hole, proclaiming 2024 as the year of the Emacs desktop, getting a little into Elisp, and Scheme through reading MIT press' [The Little Schemer](https://vpb.smallyu.net/[Type]%20books/The%20Little%20Schemer.pdf).
-I thought I understood recursion before reading this book and conceptually, I did. Having read the book now, I feel confident actually using recursion to solve problems. A feat only few of my colleagues can also attest to.
+## Exploring New Paradigms: OCaml, Haskell, and the Joy of Elixir
 
-I also spent some time with both OCaml and Haskell, two very interesting languages that I will no doubt dig deeper into in future but it was a chance encounter with a conference talk from Joe Armstrong, one 
-of the creators of Erlang at Ericsson in the 80s that has led to my current infactuation with Elixir.
+This year, I declared 2024 the “Year of the Emacs Desktop” and dove into Elisp, Scheme, and MIT Press’s [The Little Schemer](https://vpb.smallyu.net/[Type]%20books/The%20Little%20Schemer.pdf). This book reshaped my understanding of recursion—not just conceptually, but practically. It’s a skill few of my peers fully embrace, and I now feel confident leveraging it in my work.
 
-## Elixir, Phoenix and the Pipe operator
+I also explored OCaml and Haskell, two powerful languages that have piqued my curiosity. But it was a chance encounter with Joe Armstrong’s talks on Erlang that set me on my current path: discovering Elixir.
 
-<!-- blend of functional programming with being an industrial language with pragmatic framework similar to Laravel/Rails that gives perfect blend of --> 
-<!-- productive web stack with FP features (as well as scaling incredibly well due to the way the BEAM was designed) -->
+## Falling for Elixir: A Practical and Functional Powerhouse
+Elixir, a language built on the same BEAM VM as Erlang, captivated me immediately. Created by a former Rails contributor, it offers the productivity of frameworks like Laravel with the functional elegance I love.
 
-<!-- Also great community/discord, docs (after getting used to them) -->
-I had heard about Elixir for quite a while but had never really looked into it given I had a full time job and young family as well as multiple hobbies outside of programming. I also just really wanted to 
-use Clojure for everything outside of my day job such was my love for Lisps.
+Within my first week, I built a Phoenix web app with LiveView and solved Advent of Code problems with ease. The framework's speed, scalability, and simplicity astonished me. Writing rich client experiences without JavaScript? Sign me up. The community was another highlight—welcoming, helpful, and patient with my newbie questions.
 
-I had started preparing a talk to give at work on functional programming and one of my slides was titled "FP why should you care?". I wanted to show people that FP was not simply some academic thing that 
-required a new way of thinking for no great benefit so decided to use this slide to do a bit of a case study on Erlang's use in industry.
+Here’s what FizzBuzz looks like in Elixir:
+
+```Elixir
+1..100 |> Enum.map(fn i -> cond do
+    rem(i, 15) == 0 -> "FizzBuzz"
+    rem(i, 3) == 0 -> "Fizz"
+    rem(i, 5) == 0 -> "Buzz"
+    true -> i
+    end
+end)
+```
+While I still prefer Clojure’s syntax, Elixir’s pipeline operator makes data transformations effortless. Comparing this to PHP’s equivalent for a simple Advent of Code solution highlights how FP can simplify complex tasks:
+
+```PHP
+<?php declare(strict_types=1);
+
+echo array_reduce(
+    array_map(
+        fn (string $i) => intval(substr($i, 0, 1) . substr($i, -1)),
+        preg_replace(
+            "/[^\d]/",
+            '',
+            preg_split(
+                pattern: "/\n/",
+                subject: file_get_contents(__DIR__ . "/real.txt"),
+                flags: PREG_SPLIT_NO_EMPTY
+            )
+        )
+    ),
+    fn (?int $a, ?int $b) => $a + $b
+);
+
+```
+The difference in readability and maintainability speaks for itself.
+
+## Wrapping Up
+
+Is Elixir a silver bullet? No. Will I use it for every project? Absolutely not. But I’ve found immense joy and productivity in this language. Over the coming months, I look forward to sharing more about my Elixir adventures and the fantastic ecosystem it offers.
+
+Functional programming has transformed how I write code. It’s a mindset that prioritizes simplicity, elegance, and efficiency. Whether it’s Clojure, shell scripting, or Elixir, FP continues to shape my journey—and I couldn’t be more excited to see where it leads next.
