@@ -33,6 +33,3 @@ theme = 'cactus'
 [[params.social]]
   name = "linkedin"
   link = "https://linkedin.com/in/theoboldalex/"
-
-[pagination]
-  pagerSize = 20
