@@ -14,9 +14,16 @@ The plan was not to make it my daily driver but to see if I could get a nice, sm
 challenge if not match the ergonomics of my NeoVim environment.
 
 ## What did I like about Emacs?
+
 ## What did I not like about Emacs?
+
 ## Efficiency of movement
+
 ## Avoiding Evil mode
+
+As a long time user of Vim that gets annoyed at the implementations of Vim bindings in other editors (looking at you VSCode and JetBrains) I decided to steer clear of Evil mode.
+Perhaps my on ramp may have been smoother if I had opted to use it but honestly, a little study and practice of the "Holy" bindings and within a week or so, I was starting to move 
+with relative ease. I especially spent some time learning and practicing some of the editing tasks I take for granted in Vim for example using macros and various visual modes. I must say that Emacs' rectangle mode is a joy to use for editing.
 ## Macros
 ## Searching forwards and backwards
 ## Splits
