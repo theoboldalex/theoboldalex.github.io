@@ -23,3 +23,17 @@ I will try to frame everything I do and accept into my life this year around sim
 want to take on more responsibility at work? Will that make my life simpler? How do I want to spend my leisure time? Does that lead to simpler decision making? Do I want to install smart lights in my home when I have a perfectly serviceable light switch right there on the wall? Hell No!
 
 In order to achieve this, I will need more than simply some motivation, it will require the discipline to say no things that might be interesting, or might give me favour with my boss. Basically, if it isn't a hell yes, it is a no. Will I miss out on some potentially interesting life experiences? Perhaps, but this is a risk I am willing to take to keep my life simple.
+
+** Changes
+
+So, with simplicity in mind, I have some changes that I can make in January to ensure that I set myself up for success. These are:
+
+- Cancel any products that I "own" under a digital subscription model
+- Quit social media/brain rot
+- Find balance by focussing on a small number of hobbies that require little to no equipment
+  - Running
+  - Reading
+  - Writing
+  - Fly Fishing
+  - Programming
+  - Playing Classical Guitar
