@@ -1,7 +1,7 @@
 ---
 title: "My Goals For 2025"
 date: 2025-01-03T22:17:27Z
-draft: true
+draft: false
 ---
 
 I love this time of year for many reasons (and hate it for many more) but one of my favorite things about this time of year is that taking time away from 
