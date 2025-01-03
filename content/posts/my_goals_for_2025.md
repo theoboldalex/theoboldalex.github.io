@@ -28,6 +28,7 @@ In order to achieve this, I will need more than simply some motivation, it will 
 
 So, with simplicity in mind, I have some changes that I can make in January to ensure that I set myself up for success. These are:
 
+- Consider whether the tech lead role is still where I want to be or whether being an IC would be a better fit
 - Cancel any products that I "own" under a digital subscription model
 - Quit social media/brain rot
 - Find balance by focussing on a small number of hobbies that require little to no equipment
@@ -37,3 +38,16 @@ So, with simplicity in mind, I have some changes that I can make in January to e
   - Fly Fishing
   - Programming
   - Playing Classical Guitar
+
+I plan to check in on my goals daily through building a small journalling habit with the purpose of allowing me to ask myself a few questions each day and reflect on how I am spending my time. These questions are:
+
+- Am I content in my work?
+- Did I balance work and life as well as I could have today?
+- Did I spend time outside exercising?
+- Am I working towards the goals I have set?
+- What is currently in my way? (blockers)
+- Am I using my income wisely?
+
+As with all plans, I expect for things to get in the way and to face numerous challenges along the way but the way I see it, if I can make only 20% of these changes stick, that would be a big improvement. Let's get started and find out.
+
+:wq!
