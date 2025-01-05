@@ -14,3 +14,9 @@ a good way to keep me focussed throughout the year and I learned a ton from the 
 ## The Little Schemer
 
 ## Crafting Interpreters
+
+## Why Did I Choose These Books?
+
+You may have noticed a bit of a theme in the books I selected this year and they are pushing my knowledge deeper into lower level languages, compilers and Lisp/FP languages. It is no secret that I have strong opinions about many programming languages and
+there are many things that I would change about each and every language that I have yet experienced. With that in mind, I want to get a deeper understanding of how languages work, how to write interpreters and compilers and obviously at some point implement my
+own Lisp dialect (with strong static typing if I can).
