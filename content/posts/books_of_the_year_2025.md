@@ -1,7 +1,7 @@
 ---
 title: "Books I Want to Read in 2025"
 date: 2025-01-05T18:54:35Z
-draft: true
+draft: false
 ---
 
 Last year I wrote a post about how I was going to focus on only reading a small number of important books and while this was not perfect, and I did reading some books that were not on the original list (and didn't read one of those that was), I found it to be
@@ -25,4 +25,4 @@ I have heard so many good things about this book and it is freely available onli
 
 You may have noticed a bit of a theme in the books I selected this year and they are pushing my knowledge deeper into lower level languages, compilers and Lisp/FP languages. It is no secret that I have strong opinions about many programming languages and
 there are many things that I would change about each and every language that I have yet experienced. With that in mind, I want to get a deeper understanding of how languages work, how to write interpreters and compilers and obviously at some point implement my
-own Lisp dialect (with strong static typing if I can).
+own Lisp dialect.
