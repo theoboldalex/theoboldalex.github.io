@@ -16,7 +16,7 @@ theme = 'cactus'
   copywrite = "Alex Theobold"
   logo = "images/site.png"
 
-  # colortheme = "dark"
+  colortheme = "light"
   # mainSection = "home"
   mainSectionTitle = "Musings"
   showallpostsonhomepage = true
