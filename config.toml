@@ -15,6 +15,7 @@ theme = 'cactus'
   since = 2022
   copywrite = "Alex Theobold"
   logo = "images/site.png"
+  googleAnalyticsAsync = false
 
   colortheme = "light"
   # mainSection = "home"
