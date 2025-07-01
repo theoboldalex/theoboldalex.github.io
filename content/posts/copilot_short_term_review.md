@@ -1,7 +1,7 @@
 ---
 title: "Github Copilot - My First Thoughts After a Month of Daily Use"
 date: 2025-07-01T21:45:47+01:00
-draft: true
+draft: false
 ---
 
 So it finally caught up with me. Github Copilot. The corporate darling of blazingly fast software delivery and cognitive rot. In this short term review I will make some attempt
