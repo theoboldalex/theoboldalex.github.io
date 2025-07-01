@@ -2,6 +2,7 @@ baseURL = '/'
 languageCode = 'en-us'
 title = 'Alex Theobold'
 theme = 'cactus'
+GoogleAnalytics = false
 
 [markup]
   [markup.highlight]
@@ -15,10 +16,8 @@ theme = 'cactus'
   since = 2022
   copywrite = "Alex Theobold"
   logo = "images/site.png"
-  googleAnalyticsAsync = false
 
   colortheme = "light"
-  # mainSection = "home"
   mainSectionTitle = "Musings"
   showallpostsonhomepage = true
 
