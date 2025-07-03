@@ -1,5 +1,5 @@
 ---
-title: "Profiling ZSH - How I Made My Shell Startup Exponentially Faster"
+title: "Profiling ZSH - How I Made My Shell Startup Exponentially Faster (and borked my machine)"
 date: 2025-07-03T19:44:04+01:00
 draft: true
 ---
@@ -25,3 +25,28 @@ a simple one liner on the command line to give me my shell startup time averaged
 ```shell
 for i in {1..10}; do /usr/bin/time -f "Run $i: %e seconds" $SHELL -i -c exit; done
 ```
+I was not looking for total accuracy here, just a quick ball park benchmark of the shell startup time. It did the trick. I could see that every time the shell started up, it was taking around 1 second for the 
+prompt to be available. Far too long to be usable.
+
+Ok, now I could get to finding the culprit of the slowness. To profile a `zsh` shell with `zprof` you need to edit your `.zshrc` like the following.
+
+```shell
+zmodload zsh/zprof
+
+# The rest of your config
+
+zprof
+```
+
+Once you have saved and sourced your config, you can now spawn a new shell and it will print out a table showing the slowest processes in a descending list. Bingo! `nvm` was taking up over 60% of the time it 
+took to spawn a new shell. With `nvm` disabled, I then ran my benchmark and saw my shell startup time back down to below 1/10th second.
+
+The only thing left to do now is remove the profiler calls from the `.zshrc` and resource so that the profiler does not run on every new session. Don't do what I did at this point though. 
+
+At the time, I had a shell alias `nah` that I had picked up from somewhere (I think it was Freek Van Der Verten but not sure). It was a simple alias.
+
+```shell
+alias nah='git reset --hard;git clean -df'
+```
+
+This alias might seem pretty innocuous at first glance and it is, IF YOU RUN IT IN A DIRECTORY THAT IS UNDER VERSION CONTROL WITH GIT! Unfortunately for me, I ran it in my home directory where my `.zshrc` resided. By the time I had realised what was happening, it was too late. Far too late. Git had cleaned up all the unversioned files in my home directory. It was a bad day to be me.
