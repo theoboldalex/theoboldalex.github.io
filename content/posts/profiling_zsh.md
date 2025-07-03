@@ -50,3 +50,10 @@ alias nah='git reset --hard;git clean -df'
 ```
 
 This alias might seem pretty innocuous at first glance and it is, IF YOU RUN IT IN A DIRECTORY THAT IS UNDER VERSION CONTROL WITH GIT! Unfortunately for me, I ran it in my home directory where my `.zshrc` resided. By the time I had realised what was happening, it was too late. Far too late. Git had cleaned up all the unversioned files in my home directory. It was a bad day to be me.
+
+I no longer have that alias and I have my dotfiles repo set up in a much more sane way to avoid similar issues in future but it was a good learning excercise in how accidentally running a command in the wrong
+directory can have dire consequences. You live and learn.
+
+Nowadays, I keep the profiler lines in my `.zshrc` and have them commented so they are easy enough to toggle on and off with a couple of shortcuts. Perhaps you might do the same.
+
+:wq
