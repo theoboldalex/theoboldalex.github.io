@@ -12,7 +12,7 @@ After a while though I began to notice something. Nothing major but something fe
 was hanging. Only for a short while but noticeable and long enough just to throw me out of my flow. As someone that lives on the command line and spawns lots of short lived shell sessions via tmux, it was starting 
 to become an issue. What had started as a solution, was now looking like a problem, but at this stage I had no idea what the culprit of my slow shell startup was. Without having looked into it, I was wondering
 whether my old laptop was starting to struggle, but then the issue was also noticeable on my work machine which was vastly more powerful. I needed to figure out what was causing the slowness and quick because
-when you are in a tool all day long and there is noticable lag and latency, it is a real productivity killer. It is one of the reasons why I am a shell and vim user in the first place. The speed and resource usage.
+when you are in a tool all day long and there is noticeable lag and latency, it is a real productivity killer. It is one of the reasons why I am a shell and vim user in the first place. The speed and resource usage.
 
 So I needed to figure out why my shell was slow to start up and had a couple of theories that proved to be false. I also considered uninstalling Oh My Zsh as I wondered whether that might be the culprit. I use 
 barely any of the features other than a minimal prompt that I wrote myself including git branch information and zsh-autosuggestions which really, I could live without and instead rely on bck-search or fzf.
@@ -28,7 +28,7 @@ for i in {1..10}; do /usr/bin/time -f "Run $i: %e seconds" $SHELL -i -c exit; do
 I was not looking for total accuracy here, just a quick ball park benchmark of the shell startup time. It did the trick. I could see that every time the shell started up, it was taking around 1 second for the 
 prompt to be available. Far too long to be usable.
 
-Ok, now I could get to finding the culprit of the slowness. To profile a `zsh` shell with `zprof` you need to edit your `.zshrc` like the following.
+OK, now I could get to finding the culprit of the slowness. To profile a `zsh` shell with `zprof` you need to edit your `.zshrc` like the following.
 
 ```shell
 zmodload zsh/zprof
@@ -51,7 +51,7 @@ alias nah='git reset --hard;git clean -df'
 
 This alias might seem pretty innocuous at first glance and it is, IF YOU RUN IT IN A DIRECTORY THAT IS UNDER VERSION CONTROL WITH GIT! Unfortunately for me, I ran it in my home directory where my `.zshrc` resided. By the time I had realised what was happening, it was too late. Far too late. Git had cleaned up all the unversioned files in my home directory. It was a bad day to be me.
 
-I no longer have that alias and I have my dotfiles repo set up in a much more sane way to avoid similar issues in future but it was a good learning excercise in how accidentally running a command in the wrong
+I no longer have that alias and I have my dotfiles repo set up in a much more sane way to avoid similar issues in future but it was a good learning exercise in how accidentally running a command in the wrong
 directory can have dire consequences. You live and learn.
 
 Nowadays, I keep the profiler lines in my `.zshrc` and have them commented so they are easy enough to toggle on and off with a couple of shortcuts. Perhaps you might do the same.
