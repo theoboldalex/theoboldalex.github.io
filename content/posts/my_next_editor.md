@@ -8,4 +8,5 @@ draft: true
 - I don't need much in terms of functionality
 - Basically zero config
 - Not even using vim motions plugins
+- Still using emacs and neovim outside of work for "fun" code
 
