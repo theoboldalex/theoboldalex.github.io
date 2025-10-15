@@ -20,8 +20,14 @@ all the time as engineers.
 The biggest benefit of designing a simple system though is that it enables us to change the system as we learn more about the domain and our requirements 
 change over time. The ability to change the system, or _plasticity_ is my second guiding principle of software design.
 
-
 ## Plasiticity
 
+If a software system is simply written and then left to work in an unaltered state forever or until it is deprecated, then plasticity is not important.
+However, I have never come across such a system. For this reason, plasticity is my second guiding principle of software design. Every system I have ever
+worked on has shifted its requirements over time, often before the system has even finished being built.
+
+A system that is easy to change is a system that is enjoyable to work on. I have worked on many systems that were not malleable and they have never sparked 
+joy in me. A system where change is hard means we cannot move as quickly or nimbly as we might in a system where change is easy. My experience tells me that
+rigid, tightly coupled (adhesive not cohesive) systems also often lack automated tests (which has been a result of writing code that is not easy to test).
 
 :wq
